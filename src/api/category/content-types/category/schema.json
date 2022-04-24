@@ -5,11 +5,13 @@
     "singularName": "category",
     "pluralName": "categories",
     "displayName": "Category",
-    "name": "category"
+    "name": "category",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "name": {
@@ -21,11 +23,18 @@
       "targetField": "name",
       "required": true
     },
-    "articles": {
+    "works": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::article.article",
-      "mappedBy": "category"
+      "relation": "manyToMany",
+      "target": "api::work.work",
+      "mappedBy": "categories"
+    },
+    "color": {
+      "type": "string",
+      "default": "#fbceb1",
+      "regex": "#\\S+",
+      "minLength": 7,
+      "required": true
     }
   }
 }

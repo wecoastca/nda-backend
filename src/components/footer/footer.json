@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_index_footers",
+  "info": {
+    "displayName": "Footer",
+    "icon": "address-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "richtext"
+    },
+    "linkColor": {
+      "type": "string",
+      "default": "#fbceb1",
+      "regex": "#\\S+",
+      "required": true,
+      "maxLength": 7
+    },
+    "isBluredLink": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

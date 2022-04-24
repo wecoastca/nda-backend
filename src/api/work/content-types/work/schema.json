@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "works",
+  "info": {
+    "singularName": "work",
+    "pluralName": "works",
+    "displayName": "Work",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "maxLength": 96,
+      "required": true
+    },
+    "isNDA": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "required": true,
+      "default": "1"
+    },
+    "originalImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "fakeImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "works"
+    },
+    "workDescription": {
+      "displayName": "workDescription",
+      "type": "component",
+      "repeatable": false,
+      "component": "description.work-description"
+    }
+  }
+}
