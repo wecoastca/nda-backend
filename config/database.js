@@ -1,11 +1,19 @@
-const path = require('path');
-
-module.exports = ({ env }) => ({
+const parse = require('pg-connection-string').parse;
+module.exports = ({env}) => {
+  const config = parse(env('DATABASE_URL'));
+  return ({
   connection: {
-    client: 'sqlite',
+    client: 'postgres',
     connection: {
-      filename: path.join(__dirname, '..', env('DATABASE_FILENAME', '.tmp/data.db')),
+      host: config.host,
+      port: config.port,
+      database: config.database,
+      user: config.user,
+      password: config.password,
+      ssl: {
+        rejectUnauthorized: false
+      },
     },
-    useNullAsDefault: true,
+    debug: false,
   },
-});
+})};

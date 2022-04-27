@@ -7,8 +7,7 @@
     "lodash.set": "^4.3.2",
     "mime-types": "^2.1.27",
     "pg": "^8.7.3",
-    "pg-connection-string": "^2.5.0",
-    "sqlite3": "5.0.2"
+    "pg-connection-string": "^2.5.0"
   },
   "name": "backend",
   "private": true,
@@ -22,7 +21,9 @@
   },
   "devDependencies": {},
   "author": {
-    "name": "A Strapi developer"
+    "name": "Shishov Anton",
+    "email" : "foxconq@gmail.com",
+    "url" : "https://github.com/wecoastca"
   },
   "strapi": {
     "uuid": "6ee20b40-77c6-4016-a860-3ce0089467d1",
