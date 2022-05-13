@@ -1,17 +1,14 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "text_categories",
   "info": {
-    "singularName": "category",
-    "pluralName": "categories",
-    "displayName": "Work Category",
-    "name": "category",
+    "singularName": "text-category",
+    "pluralName": "text-categories",
+    "displayName": "Text Category",
     "description": ""
   },
   "options": {
-    "increments": true,
-    "timestamps": true,
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
@@ -23,12 +20,6 @@
       "type": "uid",
       "targetField": "name",
       "required": true
-    },
-    "works": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::work.work",
-      "mappedBy": "categories"
     },
     "color": {
       "type": "string",
