@@ -54,6 +54,11 @@
       "type": "component",
       "repeatable": false,
       "component": "description.work-description"
+    },
+    "isShowOnMain": {
+      "type": "boolean",
+      "default": true,
+      "required": true
     }
   }
 }
